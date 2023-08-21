@@ -7,19 +7,19 @@
 </head>
 <div layout:fragment="content">
     <form class="flex flex-auto flex-col h-96" action="#" enctype="multipart/form-data" method="post" th:action="@{'/p/' + ${slug} + '/newPost'}">
-        <h1 class="mt-20 font-trace text-center text-4xl text-indigo-500">Create a new post</h1>
+        <h1 class="mt-20 font-trace text-center text-4xl text-indigo-500">Thread genesis</h1>
         <div class="mt-10 flex flex-auto flex-col">
-            <label class="text-green-400 text-center font-bold" for="title">Title</label>
-            <input class="mt-3 w-[500px] text-purple-600 ml-auto mr-auto text-center" field="*{title}" id="title" name="title" placeholder="Title" required type="text">
+            <label class="text-green-400 text-center font-bold" for="title">Titill</label>
+            <input class="mt-3 w-[500px] text-purple-600 ml-auto mr-auto text-center" field="*{title}" id="title" name="title" placeholder="Titill" required type="text">
         </div>
         <div class="flex flex-col flex-auto w-1/2 h-96 ml-auto mr-auto">
-            <label class="mt-6 text-green-400 text-center font-bold" for="text">Text</label>
+            <label class="mt-6 text-green-400 text-center font-bold" for="text">Texti</label>
             <textarea
                     id="text"
                     name="text"></textarea>
 
             <div class="flex flex-auto flex-row mt-8 mb-8 justify-center">
-                <label class="btn w-36 mr-3" for="image">Image</label>
+                <label class="btn w-36 mr-3" for="image">Mynd</label>
                 <input
                         class="hidden"
                         accept="image/*"
@@ -28,7 +28,7 @@
                         name="image"
                         type="file">
 
-                <label class="btn w-36 ml-3 mr-3" for="audio">Audio file</label>
+                <label class="btn w-36 ml-3 mr-3" for="audio">Hljóðfæll</label>
                 <input
                         class="hidden"
                         field="*{recording}"
@@ -38,7 +38,7 @@
                         onchange="test(this)"
                         type="text"
                         value="recording">
-                <input class="btn w-36 text-green-400 ml-3" onclick="recordAudio(this, 'recording')" type="button" value="Record">
+                <input class="btn w-36 text-green-400 ml-3" onclick="recordAudio(this, 'recording')" type="button" value="Taka upp">
                 <input
                         class="hidden"
                         accept="audio/*"
@@ -50,7 +50,7 @@
                         value="*{audio}">
             </div>
             <audio controls id="player/recording"></audio>
-            <input class="btn ml-auto mr-auto w-48 mt-8" type="submit" value="Create new post">
+            <input class="btn ml-auto mr-auto w-48 mt-8" type="submit" value="Búa til þráð">
         </div>
     </form>
 </div>

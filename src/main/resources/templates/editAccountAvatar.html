@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" layout:decorate="~{layout.html}" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-        <title layout:fragment="title">Change Avatar</title>
+        <title layout:fragment="title">Breyta prófílmynd</title>
     </head>
     <body>
         <div layout:fragment="content" th:if="${session?.user}" th:object="${session.user}">
@@ -14,8 +14,8 @@
                            name="avatar"
                            type="file"
                            class="text-center bg-black">
-                    <p class="text-red-400" th:if="${avatar}">Must select image</p>
-                    <input class="mt-2 btn" type="submit" value="Change Avatar">
+                    <p class="text-red-400" th:if="${avatar}">Verður að velja mynd</p>
+                    <input class="mt-2 btn" type="submit" value="Vista mynd">
                 </form>
             </div>
         </div>

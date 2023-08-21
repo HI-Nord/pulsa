@@ -11,9 +11,9 @@
         <div class="flex flex-row justify-between mt-8">
             <div class="w-1/4 flex flex-col h-72" style="margin-top: 42px;margin-left: auto;">
                 <button class="btn bio" th:id="@{button}">User Bio</button>
-                <button class="btn posts mt-4" th:id="@{button}" th:text="'Posts by ' + ${userName}"></button>
-                <button class="btn replies mt-4" th:id="@{button}" th:text="'Replies by ' + ${userName}"/>
-                <button class="btn subs mt-4" th:id="@{button}" th:text="'Subs followed by ' + ${userName}"/>
+                <button class="btn posts mt-4" th:id="@{button}" th:text="'Þræðir ' + ${userName}"></button>
+                <button class="btn replies mt-4" th:id="@{button}" th:text="'Svör ' + ${userName}"/>
+                <button class="btn subs mt-4" th:id="@{button}" th:text="'Undirpulsur ' + ${userName}"/>
             </div>
             <div class="w-1/2 ml-auto mr-auto">
                 <div class="hidden" th:id="bio">

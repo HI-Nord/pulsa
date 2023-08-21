@@ -5,16 +5,16 @@
 </head>
 <div class="bg-slate-800" layout:fragment="content">
     <form action="#" enctype="multipart/form-data" method="post" th:action="@{/newSub}">
-        <label for="name">Sub Pulsa Name</label>
+        <label for="name">Nafn á undirpulsu</label>
         <input field="*{name}" id="name" name="name" placeholder="Name" type="text">
-        <label for="image">Image</label>
+        <label for="image">Mynd</label>
         <input
                 accept="image/*"
                 field="*{image}"
                 id="image"
                 name="image"
                 type="file">
-        <input type="submit" value="Create new sub pulsa">
+        <input type="submit" value="Búa til undirpulsu">
     </form>
 </div>
 </html>

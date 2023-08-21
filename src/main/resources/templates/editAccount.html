@@ -11,17 +11,17 @@
                     <picture class="h-32 ml-auto mr-auto" th:if="*{avatar}">
                         <img class="h-32" th:src="@{*{avatar}}">
                     </picture>
-                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/avatar'}"><p>Change Avatar</p></a>
-                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/username'}"><p>Change Username</p></a>
-                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/password'}"><p>Change Password</p></a>
-                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/email'}"><p>Change Email</p></a>
+                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/avatar'}"><p>Breyta prófílmynd</p></a>
+                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/username'}"><p>Breyta notendanafni</p></a>
+                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/password'}"><p>Breyta lykilorði</p></a>
+                    <a class="btn mt-2" th:href="@{'/user/' + *{user_id} + '/edit/email'}"><p>Breyta netfangi</p></a>
                 </nav>
                 <form class="flex flex-col ml-8" action="#" method="post" th:action="@{'/user/' + *{user_id} + '/edit'}">
                     <label class="font-bold" for="realName">Fullt nafn:</label>
                     <input class="h-10 mt-2 text-center bg-black border-2 border-white" field="*{realName}" id="realName" name="realName" th:value="*{realName}" type="text">
                     <p th:if="${updated}">Name changed</p>
                     <!-- Hægt að bæta Bio, lista af subs og posts -->
-                    <input class="mt-2 btn" type="submit" value="Update">
+                    <input class="mt-2 btn" type="submit" value="Vista">
                 </form>
             </div>
         </div>

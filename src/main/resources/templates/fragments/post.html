@@ -130,8 +130,8 @@
     </div>
     <canvas th:unless="${post.content.audio == '' && post.content.recording == ''}" class="osc" th:id="@{${post.postId}}"></canvas>
     <div class="flex flex-col mt-4" th:if="${form}">
-        <button class="w-20 ml-auto mr-auto btn post mb-2" th:id="@{button} + @{/p/} + ${post.postId}" th:value="${post.postId}">Reply</button>
-		<p class="m-auto mt-4 font-jetbrains text-red-400"th:if="${emptyPostReply}">Reply must have content!</p>
+        <button class="w-20 ml-auto mr-auto btn post mb-2" th:id="@{button} + @{/p/} + ${post.postId}" th:value="${post.postId}">Svara</button>
+		<p class="m-auto mt-4 font-jetbrains text-red-400"th:if="${emptyPostReply}">Svar þarf að hafa innihald!</p>
         <form class="hidden flex flex-col w-1/2 ml-auto mr-auto justify-start mt-6" th:id="@{form} + @{/p/} + ${post.postId}" action="#" enctype="multipart/form-data" method="post"
               th:action="@{/p/} + ${post.sub.slug} + '/' + ${post.postId}">
             <textarea
@@ -140,7 +140,7 @@
                     name="text"></textarea>
 
             <div class="flex flex-row mt-8 mb-8 justify-center">
-                <label class="btn w-36 mr-3" for="image">Image file</label>
+                <label class="btn w-36 mr-3" for="image">Mynd</label>
                 <input
                         accept="image/*"
                         class="hidden"
@@ -159,7 +159,7 @@
                         value="recording">
 
                 <label class="btn w-36 ml-3 mr-3" for="audio">Audio file</label>
-                <input class="btn w-36 ml-3" th:attr="onclick=|recordAudio(this, 'p/${post.postId}')|" type="button" value="Record">
+                <input class="btn w-36 ml-3" th:attr="onclick=|recordAudio(this, 'p/${post.postId}')|" type="button" value="Taka upp">
                 <input
                         accept="audio/*"
                         capture
@@ -171,7 +171,7 @@
                         value="*{audio}">
             </div>
             <audio controls th:id="@{'player/p/' + ${post.postId}}"></audio>
-            <input class="btn w-36 ml-auto mr-auto mt-6" type="submit" value="Submit reply">
+            <input class="btn w-36 ml-auto mr-auto mt-6" type="submit" value="Senda svar">
         </form>
     </div>
 </div>

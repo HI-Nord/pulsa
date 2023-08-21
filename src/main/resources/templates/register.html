@@ -2,16 +2,16 @@
 <html lang="en" layout:decorate="~{layout}" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
-    <title layout:fragment="title">Register New Account</title>
+    <title layout:fragment="title">Nýr aðgangur</title>
 </head>
 <div layout:fragment="content">
     <div class="flex flex-col m-5 h-full">
-        <h2 class="text-indigo-500 font-trace text-center text-4xl m-10">Join the Pulsiverse</h2>
+        <h2 class="text-indigo-500 font-trace text-center text-4xl m-10">Vertu pulsa</h2>
         <form class="flex flex-col flex-auto w-1/4 self-center justify-between" action="#" method="post" th:action="@{/register}" th:object="${user}">
-            <label class="mt-5 text-green-400 text-center" for="userName">Username:</label>
+            <label class="mt-5 text-green-400 text-center" for="userName">Notendanafn:</label>
             <input class="mt-3 text-center bg-black border-2 border-white" id="userName" name="userName" th:field="*{userName}" type="text">
             <p class="text-center text-red-400" th:errors="*{userName}" th:if="${#fields.hasErrors('userName')}"></p>
-            <label class="mt-5 text-green-400 text-center" for="password">Password:</label>
+            <label class="mt-5 text-green-400 text-center" for="password">Lykilorð:</label>
             <input class="mt-3 text-center bg-black border-2 border-white" id="password" name="password" th:field="*{password}" type="password">
             <p class="text-center text-red-400" th:errors="*{password}" th:if="${#fields.hasErrors('password')}"></p>
             <label class="mt-5 text-green-400 text-center" for="realName">Fullt nafn:</label>
@@ -20,7 +20,7 @@
             <label class="mt-5 text-green-400 text-center" for="email">Netfang:</label>
             <input class="mt-3 text-center bg-black border-white border-2" id="email" name="email" th:field="*{email}" type="email">
             <p class="text-center text-red-400" th:error="*{email}" th:errors="*{email}" th:if="${#fields.hasErrors('email')}"></p>
-                <input class="btn mt-10" type="submit" value="Register"/>
+                <input class="btn mt-10" type="submit" value="Nýskrá"/>
         </form>
     </div>
 </div>

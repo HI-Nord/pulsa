@@ -1,5 +1,5 @@
 <header class="m-auto" th:fragment="header">
-    <div class="flex flex-auto flex-row bg-slate-800 place-content-center text-red-400">
+    <div class="flex flex-auto flex-row place-content-center text-red-400">
         <div class="m-2 flex flex-auto flex-row md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-2xl">
             <div class="flex flex-auto flex-row justify-start">
                 <div class="">
@@ -26,9 +26,8 @@
                         </div>
                         <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-5 font-audiowide"
                             tabindex="0">
-                            <li><a th:href="@{'/user/' + ${session?.user?.user_id} + '/edit'}"><p class="">Edit
-                                Account</p></a></li>
-                            <li><a href="/logout"><p class="">Log out</p></a></li>
+                            <li><a th:href="@{'/user/' + ${session?.user?.user_id} + '/edit'}"><p class="">Minn aðgangur</p></a></li>
+                            <li><a href="/logout"><p class="">Skrá út</p></a></li>
                         </ul>
                     </div>
                     <p class="font-audiowide m-auto ml-4" th:if="${session?.user}"><b>[[${session.user.userName}]]</b>
@@ -37,10 +36,10 @@
             </div>
             <div class="flex flex-auto flex-row justify-end text-lg font-audiowide" th:unless="${session?.user}">
                 <div class="m-2">
-                    <a href="/register"><p class="">Register</p></a>
+                    <a href="/register"><p class="">Nýskráning</p></a>
                 </div>
                 <div class="m-2">
-                    <a href="/login"><p class="">Log in</p></a>
+                    <a href="/login"><p class="">Innskráning</p></a>
                 </div>
             </div>
         </div>

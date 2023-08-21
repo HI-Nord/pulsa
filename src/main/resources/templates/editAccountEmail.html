@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" layout:decorate="~{layout.html}" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-        <title layout:fragment="title">Change Email</title>
+        <title layout:fragment="title">Breyta netfangi</title>
     </head>
     <body>
         <div layout:fragment="content" th:if="${session?.user}" th:object="${session.user}">
             <div th:replace="fragments/accountHeader :: accountHeader"></div>
             <div class="flex flex-col flex-auto justify-center ml-auto mr-auto">
                 <form class="flex flex-col" action="#" method="post" th:action="@{'/user/' + *{user_id} + '/edit/email'}">
-                    <label class="text-center font-bold" for="email">Email</label>
+                    <label class="text-center font-bold" for="email">Netfang</label>
                     <input class="text-center bg-black border-white border-2 h-10 mt-2" field="*{email}" id="email" name="email" th:value="*{email}" type="text">
                     <p class="text-center text-red-400" th:if="${error}" th:text="${error}"></p>
-                    <p class="text-center text-green-400" th:if="${updated}">Email changed</p>
-                    <input class="mt-2 btn" type="submit" value="Change">
+                    <p class="text-center text-green-400" th:if="${updated}">Netfang uppfært</p>
+                    <input class="mt-2 btn" type="submit" value="Vista">
                 </form>
             </div>
         </div>

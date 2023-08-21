@@ -73,7 +73,7 @@ public class UserController {
             return "register";
         }
 
-        return "redirect:/registrationSuccess";
+        return "redirect:http://pulsa.nord.is/registrationSuccess";
     }
 
     @RequestMapping(name = "/login", value = "/login", method = RequestMethod.GET)
@@ -91,7 +91,7 @@ public class UserController {
         // Breyta session time limit -> session.setMaxInactiveInterval(sec);
         session.setAttribute("user", auth);
 
-        return "redirect:/";
+        return "redirect:http://pulsa.nord.is/";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -99,7 +99,7 @@ public class UserController {
         if (session.getAttribute("user") != null) {
             session.invalidate();
         }
-        return "redirect:/";
+        return "redirect:http://pulsa.nord.is/";
     }
 
     @RequestMapping(value = "/registrationSuccess", method = RequestMethod.GET)

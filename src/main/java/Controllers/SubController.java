@@ -86,7 +86,7 @@ public class SubController {
         if (!image.isEmpty()) imgUrl = cloudinaryService.uploadImage(image);
         newSub.setImage(imgUrl);
         subService.addNewSub(newSub);
-        return "redirect:/p/" + newSub.getSlug();
+        return "redirect:http://pulsa.nord.is/p/" + newSub.getSlug();
     }
 
     @RequestMapping(value = "/p/{slug}/toggleFollow", method = RequestMethod.POST)
@@ -95,6 +95,6 @@ public class SubController {
         Sub sub = subService.getSubBySlug(slug);
         if (!user.get().isFollowing(sub)) { userService.addSub(user.get(), sub); }
         else { userService.removeSub(user.get(), sub); }
-        return "redirect:/p/" + slug;
+        return "redirect:http://pulsa.nord.is/p/" + slug;
     }
 }

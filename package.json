@@ -117,13 +117,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Selph/hugbo-1-hopur-6.git"
+    "url": "git+https://github.com/hi-nord/pulsa"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Selph/hugbo-1-hopur-6/issues"
+    "url": "https://github.com/hi-nord/pulsa"
   },
-  "homepage": "https://github.com/Selph/hugbo-1-hopur-6#readme"
+  "homepage": "https://github.com/hi-nord/pulsa#readme"
 }

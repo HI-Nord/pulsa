@@ -70,7 +70,7 @@ public class PostController {
         String renderedText = htmlRenderer.render(markdownParser.parse(text));
         Post newPost = createPost(title, sub, renderedText, image, audio, recording, session);
         postService.addNewPost(newPost);
-        return "redirect:/p/" + slug + '/' + newPost.getPostId();
+        return "redirect:http://pulsa.nord.is/p/" + slug + '/' + newPost.getPostId();
     }
 
     @RequestMapping(value = "/p/{slug}/{id}", method = RequestMethod.POST)
@@ -79,7 +79,7 @@ public class PostController {
         if (!post.isPresent()) return "postNotFound";
         if(text.isEmpty() && image.isEmpty() && audio.isEmpty() && recording.equals("recording")) {
             redirectAttributes.addFlashAttribute("emptyPostReply", true);
-            return "redirect://p/" + slug + '/' + post.get().getPostId();
+            return "redirect:http://pulsa.nord.is/p/" + slug + '/' + post.get().getPostId();
         }
         Sub sub = subService.getSubBySlug(slug);
         String renderedText = htmlRenderer.render(markdownParser.parse(text));
@@ -88,7 +88,7 @@ public class PostController {
         post.get().addReply(reply);
         postService.addNewPost(post.get());
 
-        return "redirect://p/" + slug + '/' + post.get().getPostId();
+        return "redirect:http://pulsa.nord.is/p/" + slug + '/' + post.get().getPostId();
     }
 
 
@@ -98,7 +98,7 @@ public class PostController {
         if (!prevReply.isPresent()) return "postNotFound";
         if(text.isEmpty() && image.isEmpty() && audio.isEmpty() && recording.equals("recording")) {
             redirectAttributes.addFlashAttribute("emptyReplyReply", id);
-            return "redirect://p/" + slug + '/' + postId;
+            return "redirect:http://pulsa.nord.is/p/" + slug + '/' + postId;
         }
         Sub sub = subService.getSubBySlug(slug);
         String renderedText = htmlRenderer.render(markdownParser.parse(text));
@@ -107,7 +107,7 @@ public class PostController {
         prevReply.get().addReply(reply);
         replyService.addNewReply(prevReply.get());
 
-        return "redirect://p/" + slug + '/' + postId;
+        return "redirect:http://pulsa.nord.is/p/" + slug + '/' + postId;
     }
 
     @RequestMapping(value = "/r/{id}/vote", method = RequestMethod.GET)
